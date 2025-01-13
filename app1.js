@@ -60,6 +60,8 @@ function createMealCard(meal) {
 }
 
 // Function to Add Meal to Favorites
+
+
 function addToFavorites(meal) {
   const favoriteCard = createMealCard(meal);
   favoriteMeals.appendChild(favoriteCard);
