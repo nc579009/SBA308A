@@ -60,10 +60,31 @@ function createMealCard(meal) {
 }
 
 // Function to Add Meal to Favorites
-function addToFavorites(meal) {
-  const favoriteCard = createMealCard(meal);
-  favoriteMeals.appendChild(favoriteCard);
+function saveToFavorites(recipe) {
+    // Get the current favorites from localStorage
+    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+    // Check if the recipe is already in favorites
+    const exists = favorites.find((fav) => fav.idMeal === recipe.idMeal);
+
+    if (!exists) {
+        // Add the recipe to the favorites array
+        favorites.push(recipe);
+
+        // Save the updated array back to localStorage
+        localStorage.setItem("favorites", JSON.stringify(favorites));
+
+        alert(`${recipe.strMeal} has been added to your favorites!`);
+    } else {
+        alert(`${recipe.strMeal} is already in your favorites!`);
+    }
 }
+
+
+// function addToFavorites(meal) {
+//   const favoriteCard = createMealCard(meal);
+//   favoriteMeals.appendChild(favoriteCard);
+// }
 
 // Event Listeners
 searchButton.addEventListener('click', () => {
