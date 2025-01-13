@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meal Prep Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="header" class="header">
+    <h1 class="headerTitle">Meal Prep Planner</h1>
+    <div id="navigation" class="navigation">
+      <ul class="navigationList">
+        <li class="navigationItem"><a href="#search" class="navigationLink">Search Meals</a></li>
+        <li class="navigationItem"><a href="#favorites" class="navigationLink">My Favorites</a></li>
+        <li class="navigationItem"><a href="#planner" class="navigationLink">Meal Planner</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="mainContent" class="mainContent">
+    <div id="search" class="section searchSection">
+      <h2 class="sectionTitle">Search Meals</h2>
+      <div class="searchControls">
+        <input type="text" id="mealSearch" class="searchInput" placeholder="Search for a meal...">
+        <button id="searchButton" class="searchButton">Search</button>
+      </div>
+      <div id="mealResults" class="resultsContainer">
+        <!-- Meal results will be displayed here -->
+      </div>
+    </div>
+
+    <div id="favorites" class="section favoritesSection">
+      <h2 class="sectionTitle">My Favorites</h2>
+      <div id="favoriteMeals" class="resultsContainer">
+        <!-- Favorite meals will be displayed here -->
+      </div>
+    </div>
+
+    <div id="planner" class="section plannerSection">
+      <h2 class="sectionTitle">Meal Planner</h2>
+      <div id="plannerContainer" class="plannerContainer">
+        <p class="plannerDescription">Select meals to plan your week.</p>
+        <!-- Planner functionality will go here -->
+      </div>
+    </div>
+  </div>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script type="module" src="app.js"></script>
+  
+</body>
+</html>
